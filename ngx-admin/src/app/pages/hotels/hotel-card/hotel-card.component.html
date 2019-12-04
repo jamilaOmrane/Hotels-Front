@@ -1,0 +1,37 @@
+<nb-card size="small">
+  <div class="picture" style.background-image="url('assets/images/{{hotelImage}}')"></div>
+
+  <div class="details">
+    <div class="row">
+      <div class="col-md-9 h6">{{hotel.name}}</div>
+      <div class="col-md-3 star stars">
+        <div class=" row">
+          <div *ngFor='let i of [1,2,3,4,5]'>
+            <i class="fas fa-star fa-lg; display: inline-block;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" city">
+      {{hotel.locality}}
+    </div>
+  </div>
+
+  <nb-card-footer>
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
+        <div class="row reviews">
+          <nb-icon icon="person" pack="eva" class="user"></nb-icon>
+          <span><i>{{hotelReviews}}</i></span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row reviews">
+          <nb-icon *ngFor="let i of [1,2,3,4]" icon="heart" pack="eva" class="heart"></nb-icon>
+        </div>
+      </div>
+    </div>
+  </nb-card-footer>
+</nb-card>

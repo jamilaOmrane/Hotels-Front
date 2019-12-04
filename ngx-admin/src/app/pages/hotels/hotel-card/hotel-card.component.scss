@@ -1,0 +1,48 @@
+@import '../../../@theme/styles/themes';
+
+@include nb-install-component() {
+
+  .picture {
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    border-top-left-radius: nb-theme(card-border-radius);
+    border-top-right-radius: nb-theme(card-border-radius);
+    flex: 1;
+  }
+
+  .details {
+    padding: nb-theme(card-padding);
+  }
+
+  .city {
+    text-align: justify;
+  }
+  
+  .star{
+    color: 	#ffd700;
+  }
+
+  .heart{
+    color: #e71837;
+  }
+
+  .user{
+    color: #474649;
+  }
+
+  nb-card-footer {
+    .reviews{
+      text-align: right;
+      float: right;
+      padding-bottom: 0;
+    }
+    span{
+      color: #201f20;
+      font-size: small;
+    }
+  }
+
+
+  
+}
