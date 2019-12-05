@@ -14,7 +14,6 @@ export class HotelCardComponent implements OnInit {
 
   constructor(private hotelService: HotelsService) {
     this.hotelImage = "camera1.jpg"
-
   }
 
 

@@ -20,7 +20,10 @@ export class HotelsComponent implements OnInit {
 
   getAllHotels() {
     this.hotelService.getAllHotels().subscribe(response => {
-      this.hotelsList = response.slice(0, 10)
+      for (let h of response.slice(0, 10)) {
+        let hotel = new Hotel(h['index'], h['name'], h['locality'], Math.trunc(h['hotel_class']))
+        this.hotelsList.push(hotel)
+      }
     })
   }
 

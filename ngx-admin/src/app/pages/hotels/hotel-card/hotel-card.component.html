@@ -4,16 +4,16 @@
   <div class="details">
     <div class="row">
       <div class="col-md-9 h6">{{hotel.name}}</div>
-      <div class="col-md-3 star stars">
-        <div class=" row">
-          <div *ngFor='let i of [1,2,3,4,5]'>
+      <div class="col-md-3">
+        <div class=" row star">
+          <div *ngFor='let i of [].constructor(hotel.stars)'>
             <i class="fas fa-star fa-lg; display: inline-block;"></i>
           </div>
         </div>
       </div>
     </div>
     <div class=" city">
-      {{hotel.locality}}
+      {{hotel.location}}
     </div>
   </div>
 
